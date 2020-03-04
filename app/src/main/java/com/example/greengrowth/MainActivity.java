@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         meo = (MeowBottomNavigation) findViewById(R.id.bottom_nav);
         meo.add(new MeowBottomNavigation.Model(1, R.drawable.icon_home));
         meo.add(new MeowBottomNavigation.Model(2, R.drawable.icon_soilcard));
-        meo.add(new MeowBottomNavigation.Model(3, R.drawable.icon_soilcard));
+        meo.add(new MeowBottomNavigation.Model(3, R.drawable.icon_settings));
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,  new FragmentHome()).commit();
 
