@@ -7,12 +7,10 @@ import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         meo = (MeowBottomNavigation) findViewById(R.id.bottom_nav);
         meo.add(new MeowBottomNavigation.Model(1, R.drawable.icon_home));
         meo.add(new MeowBottomNavigation.Model(2, R.drawable.icon_soilcard));
-        meo.add(new MeowBottomNavigation.Model(3, R.drawable.icon_share));
+        meo.add(new MeowBottomNavigation.Model(3, R.drawable.icon_settings));
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,  new FragmentHome()).commit();
 
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         select_fragment = new FragmentSoilCard();
                         break;
                     case ID_SHARE:
-                        select_fragment = new FragmentShare();
+                        select_fragment = new FragmentSettings();
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, select_fragment).commit();
@@ -80,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.call:
                 Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:7573963878"));
+                intent.setData(Uri.parse("tel:18001801551"));
                 startActivity(intent);
                 break;
         }
